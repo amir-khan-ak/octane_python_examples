@@ -20,9 +20,19 @@ workspace = '4123'
 resource='defects'
 
 #Create a defect in Octane
-defect_data = {"data":[{"name":"Defect created from python",
-                        "description":"This is a test defect created from python using REST API",
-                        "phase":{"id":"phase.defect.new", "type":"phase"}}]}
+defect_data = {"data":[
+                {"name":"MULTI_CREATION_01 - Defect created from python",
+                 "description":"MULTI_CREATION_01 - This is a test defect created from python using REST API",
+                "phase":{"id":"phase.defect.new", "type":"phase"}},
+                {"name": "MULTI_CREATION_02 - Defect created from python",
+                 "description": "MULTI_CREATION_02 - This is a test defect created from python using REST API",
+                 "phase": {"id": "phase.defect.new", "type": "phase"}},
+                {"name": "MULTI_CREATION_03 - Defect created from python",
+                 "description": "MULTI_CREATION_03 - This is a test defect created from python using REST API",
+                 "phase": {"id": "phase.defect.new", "type": "phase"}},
+
+]}
+
 defects = requests.post(url+'/api/shared_spaces/' + shared_space + '/workspaces/'+ workspace +'/'+resource,
                         data=json.dumps(defect_data),
                         headers=ContentType,
@@ -30,7 +40,9 @@ defects = requests.post(url+'/api/shared_spaces/' + shared_space + '/workspaces/
 
 print('Creating Defect Status: ' + str(defects.status_code))
 if defects.status_code == 201:
-    print('Defect with ID: ' + defects.json()['data'][0]['id'] + ' created successfully.')
+    print('Defect 1 with ID: ' + defects.json()['data'][0]['id'] + ' created successfully.')
+    print('Defect 2 with ID: ' + defects.json()['data'][1]['id'] + ' created successfully.')
+    print('Defect 3 with ID: ' + defects.json()['data'][2]['id'] + ' created successfully.')
 
 # Sign_out from ALM Octane
 response_code = Auth.sign_out(url, cookie)
