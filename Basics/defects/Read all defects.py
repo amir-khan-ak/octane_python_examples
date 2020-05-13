@@ -13,8 +13,8 @@ ContentType = {'Content-Type': 'application/json', 'ALM_OCTANE_TECH_PREVIEW': 't
 response_code, cookie = Auth.sign_in(url, client_id,client_secret)
 
 #Define ALM Octane shared_space and workspace
-shared_space = '146008'
-workspace = '4001'
+shared_space = '54432'
+workspace = '4123'
 
 #Read Defects using the cookie from the #Sign_in function
 resource='defects'
