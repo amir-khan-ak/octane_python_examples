@@ -1,7 +1,7 @@
 # Examples for ALM Octane REST API with Python
 This repository provides example for python using ALM Octane REST API.
 
-**BASICS**
+# BASICS
 The Basics package contains a set of package to help connecting to ALM Octane using the REST API and reading, creating, changing or deleting entities (such as defects, tests, requirements, etc.)
 
 **BASICS.Authentication package**
@@ -14,3 +14,5 @@ The defects package contains examples on how to work with defects when using the
 
 **BASICS.tests**
 The tests package contains examples on how to work with tests when using the ALM Octane REST API, i.e. Create a manual test, add steps to the manual test, etc.
+
+# External Actions
