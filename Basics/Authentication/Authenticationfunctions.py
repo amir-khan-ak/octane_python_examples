@@ -33,6 +33,7 @@ def sign_out(url, cookie):
 
 
 # ------ EXAMPLE How to use the sign_in and sign_out function
+# ------ REMOVE (code below) when using the authentication functions
 url = "https://almoctane-eur.saas.microfocus.com"
 client_id = "Python_1wqe213qwe35tt34o97oz4o"
 client_secret = "(1236123sad324324ZQ"
@@ -40,5 +41,7 @@ client_secret = "(1236123sad324324ZQ"
 response_code, cookie = sign_in(url, client_id, client_secret)
 print("Call to sign_in to ALM Octane response code: " + str(response_code))
 
-response_code = sign_out(url,cookie)
+response_code = sign_out(url, cookie)
 print("Call to sign_out to ALM Octane response code: " + str(response_code))
+
+# ------ REMOVE (code above) when using the authentication functions
