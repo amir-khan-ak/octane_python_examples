@@ -4,6 +4,13 @@ This repository provides example for python using ALM Octane REST API.
 # BASICS
 The Basics package contains a set of package to help connecting to ALM Octane using the REST API and reading, creating, changing or deleting entities (such as defects, tests, requirements, etc.)
 
+_**Requirements**_
+- Installation of Pyhton IDE, in this article PyCharm (Community Edition) is used.
+- Download and Install Python, https://www.python.org/downloads/
+- Install requests: pip install requests, https://pypi.org/project/requests/
+- Install json: https://docs.python.org/3/library/json.html
+- Generate Client Id and Client Secret for ALM Octane: https://admhelp.microfocus.com/octane/en/latest/Online/Content/AdminGuide/how_setup_APIaccess.htm- Install Flask: pip install Flask, https://pypi.org/project/Flask/
+
 **BASICS.Authentication package**
 The Authentication package contains examples on how to sign_in to and sign_out from ALM Octane. There are 2 files:
 .Login and logout.py - flat example on how to connect and disconnect to / from the ALM Octane REST API
@@ -21,10 +28,14 @@ In this package, you will find alot of external actions to demonstrate the capab
 **External Actions.Release Reporting.Release Reporting.py**
 
 _**Requirements**_
+- Installation of Pyhton IDE, in this article PyCharm (Community Edition) is used.
+- Download and Install Python, https://www.python.org/downloads/
 - Install Flask: pip install Flask, https://pypi.org/project/Flask/
 - Install Plotly: pip install plotly, https://pypi.org/project/plotly/
 - Install requests: pip install requests, https://pypi.org/project/requests/
 - Install json: https://docs.python.org/3/library/json.html
+- Generate Client Id and Client Secret for ALM Octane: https://admhelp.microfocus.com/octane/en/latest/Online/Content/AdminGuide/how_setup_APIaccess.htm- Install Flask: pip install Flask, https://pypi.org/project/Flask/
+
 
 _**Releases on Timeline**_
 This report generates a gannt chart and put all selected relation from ALM Octane UI on that gantt chart. The action (button for the external action editor: https://admhelp.microfocus.com/octane/en/15.0.40/Online/Content/AdminGuide/custom-buttons.htm), you can find in **External Actions.Release Reporting.external-actions-editor-json**. Just copy the content to you ALM Octane External Action Editor.
