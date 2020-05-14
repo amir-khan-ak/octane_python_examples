@@ -12,5 +12,33 @@
     "icon": "calendar",
     "url": "http://<yourserver>:<port>/release_overview?entity_ids={entity_ids}&entity_type={entity_type}&shared_space={shared_space}&workspace={workspace}&user_login={user_login}&email={user_email}&octane_url={octane_url}&dialog_id={dialog_id}&action=releases-overview",
     "single_entity": false
+  },
+  {
+    "name": "release-summary",
+    "title": "Show Release Summary",
+    "entity_type": [
+      "release"
+    ],
+    "views": [
+      "list",
+      "details"
+    ],
+    "icon": "system",
+    "url": "http://<yourserver>:<port>/release_summary?entity_ids={entity_ids}&entity_type={entity_type}&shared_space={shared_space}&workspace={workspace}&user_login={user_login}&email={user_email}&octane_url={octane_url}&dialog_id={dialog_id}&action=release-summary",
+    "single_entity": true
+  },
+  {
+    "name": "release-summary-table",
+    "title": "Show Releases Summary Table",
+    "entity_type": [
+      "release"
+    ],
+    "views": [
+      "list",
+      "details"
+    ],
+    "icon": "table-select",
+    "url": "http://<yourserver>:<port>/releases_summary_table?entity_ids={entity_ids}&entity_type={entity_type}&shared_space={shared_space}&workspace={workspace}&user_login={user_login}&email={user_email}&octane_url={octane_url}&dialog_id={dialog_id}&action=release-summary-table",
+    "single_entity": false
   }
 ]
