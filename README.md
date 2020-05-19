@@ -39,7 +39,7 @@ _**Requirements**_
 
 _**Releases on Timeline**_
 This report generates a gannt chart and put all selected relation from ALM Octane UI on that gantt chart. The action (button for the external action editor: https://admhelp.microfocus.com/octane/en/15.0.40/Online/Content/AdminGuide/custom-buttons.htm), you can find in **External Actions.Release Reporting.external-actions-editor-json**. Just copy the content to you ALM Octane External Action Editor.
-![Image of Releases on Timeline](images/releasesontimeline.JPG)
+![Image of Releases on Timeline](images/releasesontimeline.png)
 See this External Action in a short demo: https://youtu.be/3X7Tef9fgB8
 external-action-name: releases-overview
 
