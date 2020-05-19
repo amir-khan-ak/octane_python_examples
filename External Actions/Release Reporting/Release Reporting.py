@@ -46,6 +46,51 @@ def release_overview():
     fig = ff.create_gantt(df, title='ALM Octane Releases on Timeline')
     print(tempfile.gettempdir())
 
+    releasenum = 0
+    for release in releases_list:
+
+        # Meilensteine zum Release ermitteln
+        resource_milestone = 'milestones?query="release EQ {id IN ' + release['id'] + '}"'
+        url_milestones = url + '/api/shared_spaces/' + shared_space + '/workspaces/' + workspace + '/' + resource_milestone
+        milestone = requests.get(url_milestones,
+                                 headers=ContentType,
+                                 cookies=cookie)
+        print('Getting Milestone Status: ' + str(milestone.status_code))
+        milestone_data = milestone.json()
+        milestone_total_count = milestone_data['total_count']
+        milestone_list = milestone_data['data']
+        print('Total milestone: ' + str(milestone_total_count))
+        ms_diff = 0.6
+        for milestone in milestone_list:
+            print('Milestone name: ' + milestone['name'] + ', Id: ' + release['id'] + ', Date: ' + milestone[
+                'date'])
+
+            datum = milestone['date'][8:10] + '.' + milestone['date'][5:7] + '.' + milestone['date'][:4]
+
+            fig.add_shape(
+                type="rect",
+                x0=milestone['date'],
+                y0=releasenum,
+                x1=milestone['date'],
+                y1=releasenum + ms_diff,
+                name=milestone['name'],
+                opacity=0.5,
+            )
+
+            fig.add_trace(
+                go.Scatter(
+                    x=['' + milestone['date'] + '', '' + milestone['date'] + ''],
+                    y=[releasenum + ms_diff],
+                    mode="text",
+                    text=[datum + ' / ' + milestone['name']],
+                    textposition="top right"
+                )
+            )
+
+            ms_diff = ms_diff - 0.15
+
+        releasenum = releasenum + 1
+
     # Make figure available offline to parse to ALM Octane
     plotly.offline.plot(fig, filename='templates/releases_on_gantt.html', auto_open=False)
 
