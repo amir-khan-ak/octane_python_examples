@@ -59,9 +59,9 @@ external-action-name: release-summary-table
 **[DEFECT REPORTING]**
 
 _**Defect Heatmap**_
-This report generates a heatmap for the selected ALM Octane defects. It also applies automatically the filter chosen for this heatmap, i.e. If you want to see the heatmap for a specific release, you can set the filter in ALM Octane and select all defect to generate this heatmap. The action (button for the external action editor: https://admhelp.microfocus.com/octane/en/15.0.40/Online/Content/AdminGuide/custom-buttons.htm), you can find in **External Actions.Release Reporting.external-actions-editor-json**. Just copy the content to you ALM Octane External Action Editor.
+This report generates a heatmap for the selected ALM Octane defects. It also applies automatically the filter chosen for this heatmap, i.e. If you want to see the heatmap for a specific release, you can set the filter in ALM Octane and select all defect to generate this heatmap. The action (button for the external action editor: https://admhelp.microfocus.com/octane/en/15.0.40/Online/Content/AdminGuide/custom-buttons.htm), you can find in **External Actions.Defect Reporting.external-actions-editor-json**. Just copy the content to you ALM Octane External Action Editor.
 ![Image of Defect Heatmap](images/defectheatmap.JPG)
-See this External Action in a short demo: 
+See this External Action in a short demo: https://youtu.be/18ryPIx_fF4
 external-action-name: defect-heatmap
 
 (more to come... stay tuned...)
