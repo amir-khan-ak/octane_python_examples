@@ -36,6 +36,7 @@ _**Requirements**_
 - Install json: https://docs.python.org/3/library/json.html
 - Generate Client Id and Client Secret for ALM Octane: https://admhelp.microfocus.com/octane/en/latest/Online/Content/AdminGuide/how_setup_APIaccess.htm- Install Flask: pip install Flask, https://pypi.org/project/Flask/
 
+**[RELEASE REPORTING]**
 
 _**Releases on Timeline**_
 This report generates a gannt chart and put all selected relation from ALM Octane UI on that gantt chart. The action (button for the external action editor: https://admhelp.microfocus.com/octane/en/15.0.40/Online/Content/AdminGuide/custom-buttons.htm), you can find in **External Actions.Release Reporting.external-actions-editor-json**. Just copy the content to you ALM Octane External Action Editor.
@@ -53,6 +54,14 @@ _**Release Summary Table**_
 This report generates a summary table for multiple releases to provide a summary on the content of each release. The action (button for the external action editor: https://admhelp.microfocus.com/octane/en/15.0.40/Online/Content/AdminGuide/custom-buttons.htm), you can find in **External Actions.Release Reporting.external-actions-editor-json**. Just copy the content to you ALM Octane External Action Editor.
 ![Image of Releases on Summary Table](images/releasetable.JPG)
 See this External Action in a short demo: https://youtu.be/Q1EBkmvzAiQ
+external-action-name: release-summary-table
+
+**[DEFECT REPORTING]**
+
+_**Defect Heatmap**_
+This report generates a heatmap for the selected ALM Octane defects. It also applies automatically the filter chosen for this heatmap, i.e. If you want to see the heatmap for a specific release, you can set the filter in ALM Octane and select all defect to generate this heatmap. The action (button for the external action editor: https://admhelp.microfocus.com/octane/en/15.0.40/Online/Content/AdminGuide/custom-buttons.htm), you can find in **External Actions.Release Reporting.external-actions-editor-json**. Just copy the content to you ALM Octane External Action Editor.
+![Image of Defect Heatmap](images/defectheatmap.JPG)
+See this External Action in a short demo: 
 external-action-name: release-summary-table
 
 (more to come... stay tuned...)
