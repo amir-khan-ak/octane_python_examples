@@ -64,4 +64,13 @@ This report generates a heatmap for the selected ALM Octane defects. It also app
 See this External Action in a short demo: https://youtu.be/18ryPIx_fF4
 external-action-name: defect-heatmap
 
+**[FEATURE REPORTING]**
+
+
+_**Risky Features Circle**_
+This report generates a circle showing the risk for selectedALM Octane features. It also applies automatically the filter chosen for this circle, i.e. If you want to see the circle for a specific release or an epic, you can set the filter in ALM Octane and select all features to generate this circle. The action (button for the external action editor: https://admhelp.microfocus.com/octane/en/15.0.40/Online/Content/AdminGuide/custom-buttons.htm), you can find in **External Actions.Defect Reporting.external-actions-editor-json**. Just copy the content to you ALM Octane External Action Editor.
+![Image of Risky Feature Circle](images/RiskyFeatureCircle.jpg)
+See this External Action in a short demo: https://youtu.be/SY07Yf6N8E4
+external-action-name: risky-features
+
 (more to come... stay tuned...)

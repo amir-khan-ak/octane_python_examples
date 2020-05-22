@@ -1,0 +1,16 @@
+[
+  {
+    "name": "risky-features",
+    "title": "Show Feature Risk Circle",
+    "entity_type": [
+      "feature"
+    ],
+    "views": [
+      "list",
+      "details"
+    ],
+    "icon": "incident",
+    "url": "http://<yourserver>:<port>/risky_features?entity_ids={entity_ids}&entity_type={entity_type}&shared_space={shared_space}&workspace={workspace}&user_login={user_login}&email={user_email}&octane_url={octane_url}&dialog_id={dialog_id}&action=risky-features",
+    "single_entity": false
+  }
+]

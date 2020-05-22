@@ -10,7 +10,7 @@
       "details"
     ],
     "icon": "layout",
-    "url": "http://192.888.239.131:8083/defect_priority_severity?entity_ids={entity_ids}&entity_type={entity_type}&shared_space={shared_space}&workspace={workspace}&user_login={user_login}&email={user_email}&octane_url={octane_url}&dialog_id={dialog_id}&action=defect-heatmap",
+    "url": "http://<yourserver>:<port>/defect_priority_severity?entity_ids={entity_ids}&entity_type={entity_type}&shared_space={shared_space}&workspace={workspace}&user_login={user_login}&email={user_email}&octane_url={octane_url}&dialog_id={dialog_id}&action=defect-heatmap",
     "single_entity": false
   }
 ]
