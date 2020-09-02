@@ -10,6 +10,7 @@ TO_PHASE = '6d095vxxgej6gt601qqky2epr'
 
 app = Flask(__name__)
 
+
 @app.route('/defect_risk', methods=['POST'])
 def defect_risk():
     if request.args.get('test') is None:
@@ -29,13 +30,13 @@ def defect_risk():
             print("ENTITY: " + str(dataset['entity']))
             type = dataset['entity']['type']
             id = str(dataset['entity']['id'])
-            #risk = dataset['entity']['risk_udf']
+            # risk = dataset['entity']['risk_udf']
             name = dataset['entity']['name']
             priority = dataset['entity']['priority']
             severity = dataset['entity']['severity']
-            #phases = dataset['entity']['phase']
+            # phases = dataset['entity']['phase']
             print("******************************************")
-            #print("PHASES: " + str(phases))
+            # print("PHASES: " + str(phases))
             changes = dataset['changes']
             print("******************************************")
             print("CHANGES: " + str(dataset['changes']))
@@ -51,10 +52,10 @@ def defect_risk():
         print("name: " + name)
         print("priority: " + priority['id'])
         print("severity: " + severity['id'])
-        #print("Risk: " + risk)
+        # print("Risk: " + risk)
         print("******************************************")
         CHANGES = dataset['changes']
-        #print(str(hasattr(CHANGES, 'phase')))
+        # print(str(hasattr(CHANGES, 'phase')))
         if 'severity' in CHANGES:
             print("CHANGE severity")
             new = CHANGES['severity']['newValue']
@@ -178,18 +179,18 @@ def update_risk(defect_id, priority, severity, space, workspace):
     cookie = resp.cookies
     print('Login: ' + str(resp.status_code))
 
-    shared_space=space
-    workspace=workspace
-    #set retest counter
+    shared_space = space
+    workspace = workspace
+    # set retest counter
     # Read Defects using the cookie from the #Sign_in function
     resource = 'defects/' + defect_id
 
     # Create a defect in Octane
     defect_data = {"risk_udf": defect_risk}
     defects = requests.put(url + '/api/shared_spaces/' + shared_space + '/workspaces/' + workspace + '/' + resource,
-                            data=json.dumps(defect_data),
-                            headers=ContentType,
-                            cookies=cookie)
+                           data=json.dumps(defect_data),
+                           headers=ContentType,
+                           cookies=cookie)
 
     print('Creating Defect Status: ' + str(defects.status_code))
     if defects.status_code == 201:
@@ -208,10 +209,8 @@ def update_risk(defect_id, priority, severity, space, workspace):
     print('Logout: ' + str(resp.status_code))
 
 
-
 @app.route('/defect_webhook', methods=['POST'])
 def defect_webhook():
-
     if request.args.get('test') is None:
         server_url = request.json['server_url']
         event_type = request.json['event_type']
@@ -231,9 +230,9 @@ def defect_webhook():
             id = str(dataset['entity']['id'])
             retestcounter = dataset['entity']['risk_udf']
             name = dataset['entity']['name']
-            #phases = dataset['entity']['phase']
+            # phases = dataset['entity']['phase']
             print("******************************************")
-            #print("PHASES: " + str(phases))
+            # print("PHASES: " + str(phases))
             changes = dataset['changes']
             print("******************************************")
             print("CHANGES: " + str(dataset['changes']))
@@ -250,7 +249,7 @@ def defect_webhook():
         print("Retest counter: " + retestcounter)
         print("******************************************")
         CHANGES = dataset['changes']
-        #print(str(hasattr(CHANGES, 'phase')))
+        # print(str(hasattr(CHANGES, 'phase')))
         if 'phase' in CHANGES:
             old = CHANGES['phase']['oldValue']['id']
             new = CHANGES['phase']['newValue']['id']
@@ -287,20 +286,20 @@ def update_retest_counter(defect_id, retestcounter):
     cookie = resp.cookies
     print('Login: ' + str(resp.status_code))
 
-    shared_space='1001'
-    workspace='7001'
-    #set retest counter
+    shared_space = '1001'
+    workspace = '7001'
+    # set retest counter
     # Read Defects using the cookie from the #Sign_in function
     resource = 'defects/' + defect_id
 
     # Create a defect in Octane
-    u_retestcounter = int(retestcounter)+1
+    u_retestcounter = int(retestcounter) + 1
     print(str(u_retestcounter))
     defect_data = {"risk_udf": str(u_retestcounter)}
     defects = requests.put(url + '/api/shared_spaces/' + shared_space + '/workspaces/' + workspace + '/' + resource,
-                            data=json.dumps(defect_data),
-                            headers=ContentType,
-                            cookies=cookie)
+                           data=json.dumps(defect_data),
+                           headers=ContentType,
+                           cookies=cookie)
 
     print('Creating Defect Status: ' + str(defects.status_code))
     if defects.status_code == 201:
@@ -320,5 +319,5 @@ def update_retest_counter(defect_id, retestcounter):
 
 
 if __name__ == '__main__':
-    app.run(host='192.168.15.252',
-            port='8089')  #192.168.15.252 REGUS - 192.168.1.151 HOME
+    app.run(host='192.555.333.222',
+            port='5555')
