@@ -1,6 +1,6 @@
 [
   {
-    "name": "testdatausage",
+    "name": "test-data-usage",
     "title": "Launch Test Data Configurator",
     "entity_type": [
       "test"

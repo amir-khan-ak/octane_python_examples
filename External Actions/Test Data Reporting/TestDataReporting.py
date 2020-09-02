@@ -55,7 +55,7 @@ def Logout(url, cookie):
 
 
 @app.route('/testdatausage', methods=['GET'])
-def testdataconfigurator():
+def testdatausage():
     entity_ids = request.args.get('entity_ids')
     url = request.args.get('octane_url')
     shared_space = request.args.get('shared_space')

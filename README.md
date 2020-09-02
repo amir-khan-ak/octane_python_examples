@@ -74,7 +74,10 @@ See this External Action in a short demo: https://youtu.be/SY07Yf6N8E4
 external-action-name: risky-features
 
 **[TEST DATA USAGE REPORTING]**
-
+This report generates a HTML report with shows the usage of the test datatable's datasets in different tests and runs. This can be useful in order to understand which tests are using the diferent datasets and if there are datasets not used at all.
+![Image of Test Data Usage Report](images/datatableusageinfo.jpg)
+See this External Action in a short demo: 
+external-action-name: test-data-usage
 
 
 (more to come... stay tuned...)
