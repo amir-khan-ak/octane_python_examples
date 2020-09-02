@@ -1,0 +1,16 @@
+[
+  {
+    "name": "testdatausage",
+    "title": "Launch Test Data Configurator",
+    "entity_type": [
+      "test"
+    ],
+    "views": [
+      "list",
+      "details"
+    ],
+    "icon": "import",
+    "url": "http://192.323.12.333:6666/testdatausage?entity_ids={entity_ids}&entity_type={entity_type}&shared_space={shared_space}&workspace={workspace}&user_login={user_login}&email={user_email}&octane_url={octane_url}&dialog_id={dialog_id}&action=run-overview",
+    "single_entity": true
+  }
+]
