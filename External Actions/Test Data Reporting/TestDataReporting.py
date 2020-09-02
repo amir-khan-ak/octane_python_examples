@@ -236,4 +236,4 @@ def getDivHeader():
 
 if __name__ == '__main__':
     app.run(host='192.252.36.3',
-            port='7777')
+            port='7777') #env info

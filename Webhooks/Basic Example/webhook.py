@@ -320,4 +320,4 @@ def update_retest_counter(defect_id, retestcounter):
 
 if __name__ == '__main__':
     app.run(host='192.555.333.222',
-            port='5555')
+            port='5555')  #env info
