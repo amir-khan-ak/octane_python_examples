@@ -235,5 +235,5 @@ def getDivHeader():
     return divHeader
 
 if __name__ == '__main__':
-    app.run(host='192.168.15.246',
-            port='8888')  # '192.168.1.151' 192.168.15.67 192.168.14.106 192.168.15.238
+    app.run(host='192.252.36.3',
+            port='7777')
